@@ -22,3 +22,9 @@ form.addEventListener("submit", async (e) => {
 // write the async function deleteRating
 // make sure it redirects to /ratings after
 
+
+async function deleteRating(id) {
+    await fetch('/rating/' + id, {method: "DELETE"})
+    window.location.href = "/"
+
+}
